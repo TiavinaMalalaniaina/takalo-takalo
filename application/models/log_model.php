@@ -11,6 +11,8 @@
                 if (strcmp($username, $user['nom'])==0) {
                     if (strcmp($mdp, $user['mdp'])==0) {
                         $this->session->set_userdata('user_id', $user['idUser']);
+                        if($user['admin']==1) $this->session->set_userdata('admin', true);
+                        else $this->session->set_userdata('admin', false);
                         return;
                     }
                     throw new Exception("Mot de passe érroné");
@@ -23,6 +25,7 @@
         
         public function log_out() {
             $this->session->unset_userdata('user_id');   
+            $this->session->unset_userdata('admin');   
         }
 
 
