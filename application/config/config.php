@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://album.rf.gd/aHeberger/';
-$config['base_url'] = 'http://localhost/L2/S3/examples/aHeberger/';
+$config['base_url'] = 'http://localhost/takalo/takalo-takalo';
 
 /*
 |--------------------------------------------------------------------------
