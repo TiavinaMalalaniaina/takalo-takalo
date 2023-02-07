@@ -1,0 +1,26 @@
+.left{
+    border: solid;
+    width: 500px;
+    float: left;
+}
+.right{
+    border: solid;
+    width: 500px;
+    float: right;
+}
+.one{
+    border: solid;
+    height: 40px;
+}
+.two{
+    border: solid;
+    height: 40px;
+}
+.footer{
+    margin-top: 100px;
+    border: solid;
+}
+.container{
+    border: solid;
+    height: 500px;
+}
