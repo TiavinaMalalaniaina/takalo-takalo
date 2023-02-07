@@ -11,7 +11,7 @@
     <h1>Log in</h1>
     <form action="<?php echo site_url('/log/login'); ?>" method="post">
         <input type="text" name="username" id="username" value="tiavina">
-        <input type="password" name="mdp" id="mdp" value="malalaniaina">
+        <input type="password" name="mdp" id="mdp" value="1234">
         <?php if (strcmp($error,'')) { ?>
         <p style="color: red"><?php echo $error; ?></p>
         <?php } ?>

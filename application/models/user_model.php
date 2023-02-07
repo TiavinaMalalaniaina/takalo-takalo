@@ -1,10 +1,10 @@
 <?php
     if(!defined('BASEPATH')) exit('No direct script access allowed');
-    class user_model extends CI_Model {
+    class User_model extends CI_Model {
         
         public function getLogedUser() {
             $user_id = $this->session->userdata('user_id');
-            $sql = 'SELECT * FROM customer WHERE id=%';
+            $sql = 'SELECT * FROM user WHERE id=%';
             $sql = sprintf($sql, $user_id);
             $query = $this->db->query($sql);
             $user = $query->row_array();
@@ -12,7 +12,7 @@
         }
 
         public function getAllUser() {
-            $sql = 'SELECT * FROM customer';
+            $sql = 'SELECT * FROM user';
             $query = $this->db->query($sql);
             $user = array();
             foreach ($query->result_array() as $row) {

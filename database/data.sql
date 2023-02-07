@@ -54,6 +54,8 @@ CREATE TABLE echange (
     FOREIGN KEY (idUser1) REFERENCES user (idUser),
     FOREIGN KEY (idUser2) REFERENCES user (idUser)
 );
+INSERT INTO echange VALUES (null, 1, 2, 1);
+INSERT INTO echange VALUES (null, 1, 2, 1);
 
 
 
@@ -64,6 +66,9 @@ CREATE TABLE proposition (
     FOREIGN KEY (idEchange) REFERENCES echange (idEchange),
     FOREIGN KEY (idObject) REFERENCES object (idObject)
 );
+INSERT INTO proposition VALUES (null, 1, 3);
+INSERT INTO proposition VALUES (null, 1, 2);
+
 
 CREATE TABLE images_object (
     idImages_object INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -72,3 +77,9 @@ CREATE TABLE images_object (
     FOREIGN KEY (idObject) REFERENCES object (idObject),
     FOREIGN KEY (idImages) REFERENCES images (idImages)
 );
+
+CREATE VIEW transaction AS
+SELECT e.idEchange,e.idUser1,e.idUser2,p.idProposition,o.idObject,o.idUser
+FROM proposition p
+JOIN echange e ON e.idEchange=p.idEchange
+JOIN object o ON p.idObject=o.idObject;
