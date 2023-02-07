@@ -14,6 +14,12 @@
             return $user;
         }
 
+        public function saveObject($titre,$descri,$prix,$idCategorie){
+            /* titre  | description | prix    | idUser | idCategorie */
+            $sql = "INSERT INTO object VALUES (null,'%','%','%','%')";
+            $sql = sprintf($sql,$titre,$descri,$prix,$idCategorie);
+            $query = $this->db->query($sql);
+        }
         public function getOneObject($id) {
             // $user_id = $this->session->userdata('user_id');
             $sql = 'SELECT * FROM object WHERE idObject=%s';
