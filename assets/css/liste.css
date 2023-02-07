@@ -1,0 +1,15 @@
+.thumbnail
+{
+	width: 55%;
+	height: 90%;
+	margin-left: 5%;
+	display: inline-block;
+}
+.btn
+{
+	margin-top: 10%;
+}
+.btn-primary
+{
+	margin-right: 10%;
+}
