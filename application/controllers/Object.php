@@ -82,12 +82,15 @@ class Object extends CI_Controller {
 
 	public function profile () {
 		$this->load->model('user_model');
+		$this->load->model('echange_model');
 		$idUser = $this->session->userdata('user_id');
 		$user = $this->user_model->getUserById($idUser);
 		$objects = $this->object_model->getAllObjectDetailled($idUser);
+		$prop = $this->echange_model->getPropositionReceived();
 		$data = array(
 			'objects' => $objects,
-			'user' => $user
+			'user' => $user,
+			'prop' => $prop
 		);
 		$this->load->view('profile', $data);
 	}

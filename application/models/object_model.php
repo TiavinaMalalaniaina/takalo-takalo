@@ -15,6 +15,12 @@
         
         public function getAllObjectDetailled($idUser) {
             $sql = 'SELECT * FROM objectDetailled where iduser=%s';
+            $sql = 'SELECT o.idObject,o.idCategorie, o.titre, o.description, o.prix, u.idUser, u.nom, u.prenom, u.image
+                    FROM object o
+                    JOIN user u
+                    ON o.idUser=u.idUser
+                    WHERE u.idUser=%s
+            ';
             $sql = sprintf($sql, $idUser);
             $query = $this->db->query($sql);
             $user = array();
@@ -32,6 +38,12 @@
         
         public function getAllAllObjectDetailled($idUser) {
             $sql = 'SELECT * FROM objectDetailled where iduser!=%s';
+            $sql = 'SELECT o.idObject,o.idCategorie, o.titre, o.description, o.prix, u.idUser, u.nom, u.prenom, u.image
+                    FROM object o
+                    JOIN user u
+                    ON o.idUser=u.idUser
+                    WHERE u.idUser!=%s
+            ';
             $sql = sprintf($sql, $idUser);
             $query = $this->db->query($sql);
             $user = array();
@@ -43,6 +55,14 @@
 
         public function getOtherObjectDetailled($idUser) {
             $sql = 'SELECT * FROM otherProduct where iduser !=%s';
+            $sql = 'SELECT o.idObject, o.titre, o.description, o.prix, u.idUser, u.nom, u.prenom, u.image, c.nom nomCategorie
+                    FROM object o
+                    JOIN user u
+                    ON o.idUser=u.idUser
+                    JOIN categorie c
+                    ON c.idCategorie = o.idCategorie
+                    WHERE idUser!=%s
+            ';
             $sql = sprintf($sql, $idUser);
             $query = $this->db->query($sql);
             $user = array();
@@ -69,6 +89,12 @@
         public function getOneObjectDetailled($id) {
             // $user_id = $this->session->userdata('user_id');
             $sql = 'SELECT * FROM objectDetailled WHERE idObject=%s';
+            $sql = 'SELECT o.idObject,o.idCategorie, o.titre, o.description, o.prix, u.idUser, u.nom, u.prenom, u.image
+                    FROM object o
+                    JOIN user u
+                    ON o.idUser=u.idUser
+                    WHERE o.idObject=%s
+            ';
             $sql = sprintf($sql, $id);
             $query = $this->db->query($sql);
             $user = $query->row_array();
@@ -76,10 +102,9 @@
         }
 
         public function getOtherObject() {
-            // $user_id = $this->session->userdata('user_id');
-            $user_id = 2;
-            // $sql = 'SELECT * FROM object WHERE idUser=%s';
-            $sql = 'SELECT * FROM object where iduser != 2';
+            $user_id = $this->session->userdata('user_id');
+            $sql = 'SELECT * FROM object WHERE idUser!=%s';
+            $sql = sprintf($sql, $user_id);
             $query = $this->db->query($sql);
             $user = array();
             foreach ($query->result_array() as $row) {
@@ -108,6 +133,12 @@
 
         public function search($text, $idCategorie) {
             $sql = "SELECT * FROM objectDetailled WHERE titre LIKE '%s%s%s' AND idCategorie=%s";
+            $sql = "SELECT o.idObject,o.idCategorie, o.titre, o.description, o.prix, u.idUser, u.nom, u.prenom, u.image
+                    FROM object o
+                    JOIN user u
+                    ON o.idUser=u.idUser
+                    WHERE o.titre LIKE '%s%s%s' AND o.idCategorie=%s
+            ";
             $sql = sprintf($sql,'%', $text, '%', $idCategorie);
             echo $sql;
             $query = $this->db->query($sql);
@@ -136,6 +167,13 @@
 
         public function getHistorique($idObject) {
             $sql = "SELECT * FROM historiqueEchangeDetailled WHERE idObject=%s ORDER BY dateEchange";
+            $sql = 'SELECT he.*, o.titre, o.description, o.prix, u.nom, u.prenom 
+                    FROM historiqueEchange he
+                    JOIN object o ON he.idObject=o.idObject
+                    JOIN user u ON he.idUser=u.idUser
+                    WHERE he.idObject=%s 
+                    ORDER BY he.dateEchange
+                    ';
             $sql = sprintf($sql, $idObject);
             $query = $this->db->query($sql);
             $idCategorie = array();

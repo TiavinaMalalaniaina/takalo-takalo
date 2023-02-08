@@ -178,10 +178,10 @@
         }
 
         public function getNbrEchange() {
-            $sql = "SELECT count(idEchange) FROM echange WHERE etat=5";
+            $sql = "SELECT count(idEchange) s FROM echange WHERE etat=5";
             $query = $this->db->query($sql);
             $nbr = $query->row_array();
-            return $nbr;
+            return $nbr['s'];
         }
 
 

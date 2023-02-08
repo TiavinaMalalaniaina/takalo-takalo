@@ -5,6 +5,7 @@ class Categorie extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Categorie_model');
 		$this->load->model('user_model');
+		$this->load->model('echange_model');
         $this->load->model('object_model');
 		$this->load->helper('form');
 	}
@@ -14,7 +15,13 @@ class Categorie extends CI_Controller {
 			'error' => urldecode($error)
 		);
         $table = $this->Categorie_model->getAllCategorie();
-        $data = array('table'=>$table);
+        $user = $this->user_model->getNbrUser();
+        $echange = $this->echange_model->getNbrEchange();
+        $data = array(
+            'table'=>$table,
+            'nbrUser'=>$user,
+            'nbrEchange'=>$echange
+        );
 		$this->load->view('Categorie_form',$data);
 	}
     

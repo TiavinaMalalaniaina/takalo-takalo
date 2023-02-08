@@ -320,7 +320,13 @@
                 </div>
 
             </div>
-        
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>2</li>
+                <li>3</li>
+                <li>3</li>
+            </ul>
             <!-- row -->
 			<div class="container-fluid">
 				<div class="widget-heading d-flex justify-content-between align-items-center">
@@ -366,8 +372,12 @@
 						</div>
 					</div>
 					<?php } ?>	
-                    <a href="<?php echo site_url('object/listObject'); ?>" class="btn btn-primary btn-sm">All Object</a>
-
+                    <p>
+                        <a href="<?php echo site_url('object/insertObjectForm'); ?>" class="btn btn-primary btn-sm">Ajouter un nouvel Object</a>
+                    </p>
+                    
+                        <a href="<?php echo site_url('object/listObject'); ?>" class="btn btn-primary btn-sm">All Object</a>
+                    
             </div>
         </div>
         

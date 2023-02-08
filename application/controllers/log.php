@@ -52,6 +52,10 @@ class Log extends CI_Controller {
 		redirect(site_url('log/index'));
 	}
 
+	public function signup() {
+		$this->load->view('inscription');
+	}
+
 	public function pdp() {
 		
 	}

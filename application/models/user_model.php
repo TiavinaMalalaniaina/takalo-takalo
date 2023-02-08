@@ -34,10 +34,10 @@
 
 
         public function getNbrUser() {
-            $sql = "SELECT count(*) FROM user WHERE admin=0";
+            $sql = "SELECT count(*) s FROM user WHERE admin=0";
             $query = $this->db->query($sql);
             $nbr = $query->row_array();
-            return $nbr;
+            return $nbr['s'];
         }
 
         public function getLastUser() {

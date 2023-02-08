@@ -313,6 +313,19 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Statistique</h4>
+                            </div>
+                            <div class="card-body">
+                                <?php var_dump($nbrUser) ?>
+                                <h3>Nombre d'user : <?php echo $nbrUser; ?></h3>
+                                <h3>Nombre d'échange : <?php echo $nbrEchange; ?></h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

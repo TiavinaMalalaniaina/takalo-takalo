@@ -88,30 +88,14 @@
 				<ul class="metismenu" id="menu">
                     <li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
 							<i class="bi bi-grid"></i>
-							<span class="nav-text">Dashboard</span>
 						</a>
-                        <ul aria-expanded="false">
-							<li><a href="index.html">Dashboard Light</a></li>
-							<li><a href="index-2.html">Dashboard Dark</a></li>
-							<li><a href="schedule.html">schedule</a></li>
-							<li><a href="instructors.html">Instructors</a></li>
-							<li><a href="message.html">Message</a></li>	
-							<li><a href="activity.html">Activity</a></li>	
-							<li><a href="profile.html">Profile</a></li>	
-						</ul>
+                        
 
                     </li>
 					<li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
 						<i class="bi bi-book"></i>
-
-							<span class="nav-text">Courses</span>
 						</a>
-                        <ul aria-expanded="false">
-							<li><a href="courses.html">Courses</a></li>
-							<li><a href="course-details-1.html">Course Details 1</a></li>
-							<li><a href="course-details-2.html">Course Details 2</a></li>
-							
-						</ul>
+                        
 
                     </li>
 					<li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
@@ -257,14 +241,7 @@
                         </ul>
                     </li>
                 </ul>
-				<div class="plus-box">
-					<div class="d-flex align-items-center">
-						<h5>Upgrade your Account to Pro</h5>
-						<img src="images/medal.png">
-					</div>
-					<p>Upgrade to premium to get premium features</p>
-					<a href="javascript:void(0);" class="btn btn-primary btn-sm">Upgrade</a>
-				</div>
+				
 				<div class="copyright">
 					<p><strong>GetSkills Online Learning Admin</strong> © 2022 All Rights Reserved</p>
 					<p class="fs-12">Made with <span class="heart"></span> by HugeBinarys</p>
@@ -374,6 +351,9 @@
         <div class="footer">
             <div class="copyright">
                 <p>Copyright © Designed   by <a href="https://themeforest.net/user/hugebinary" target="_blank">HugeBinary</a> 2022</p>
+                <h4>ETU001954 - FANOVOSOA Rotsy Sabrina</h4>
+                <h4>ETU002025 - RAMIANDRISOA Tiavina Malalaniaina</h4>
+                <h4>ETU002035 - RANDRIAMAMPIANINA Tsiky Aro Rary </h4>
             </div>
         </div>
         <!--**********************************
