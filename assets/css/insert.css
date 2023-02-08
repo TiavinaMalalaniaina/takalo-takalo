@@ -1,12 +1,18 @@
 .left{
+    margin-top: 20px;
     border: solid;
     width: 500px;
+    height: 500px;
     float: left;
+    /* margin-left: 60px; */
 }
 .right{
+    margin-top: 20px;
     border: solid;
     width: 500px;
+    height: 500px;
     float: right;
+    /* margin-right: 60px; */
 }
 .one{
     border: solid;
@@ -18,9 +24,11 @@
 }
 .footer{
     margin-top: 100px;
-    border: solid;
+    /* border: solid; */
 }
-.container{
-    border: solid;
+.divv{
+    /* border: solid; */
     height: 500px;
+    width: 96%;
+    margin: 0 auto;
 }

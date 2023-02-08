@@ -8,18 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="divv">
         <div class="left">
             <p>User 1</p>
             <div class="one">hehe</div>
             <div class="two">hehe</div>
-			<center><button><a href="#" >Ajouter</a></button></center>
+			<center><button class="bb"><a href="#" >Ajouter</a></button></center>
         </div>
         <div class="right">
             <p>User 1</p>
             <div class="one">hehe</div>
             <div class="two">hehe</div>
-			<center><button><a href="#" >Ajouter</a></button></center>
+			<center><button class="bb"><a href="#" >Ajouter</a></button></center>
         </div>
     </div>
     <center>

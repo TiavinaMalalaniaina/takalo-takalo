@@ -22,8 +22,10 @@ class Welcome extends CI_Controller {
 	{
 		// $this->load->view('welcome_message');
 		// $this->load->view('login');
-		$this->load->view('pageproposition');
+		// $this->load->view('pageproposition');
 		// $this->load->view('allproposition');
+		// $this->load->view('proposition');
+		$this->load->view('detailproposition');
 		
 		// $this->load->view('header');
 		// $this->load->view('profil');
@@ -53,9 +55,10 @@ class Welcome extends CI_Controller {
 		$data['contents']='profil';
 		$this->load->view('page',$data);
 	}
-	
+
 	public function pageproposition(){
 		$data['contents']='allproposition';
 		$this->load->view('pageproposition',$data);
 	}
+	
 }
