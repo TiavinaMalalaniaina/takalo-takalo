@@ -1,10 +1,24 @@
-.thumbnail
-{
-	width: 55%;
-	height: 90%;
-	margin-left: 5%;
-	display: inline-block;
-}
+.box {
+	margin: 0 auto;
+	width: 80%;
+	height: 800px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 10px 2em;
+  }
+  .box img{
+	width: 500px;
+	height: 250px;
+  }
+  .ajout{
+	width: 96%;
+	margin: 0 auto;
+	background-color: black;
+  }
+  .ajout .btt{
+	width: 10% ;
+  }
+
 .btn
 {
 	margin-top: 10%;
@@ -15,7 +29,6 @@
 }
 .container a{color: white;}
 .container button{
-	
 	width: 150px;
 	height: 40px;
 	margin-left: 490px;

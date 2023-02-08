@@ -21,7 +21,9 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		// $this->load->view('welcome_message');
-		$this->load->view('login');
+		// $this->load->view('login');
+		// $this->load->view('header');
+		$this->load->view('profil');
 	}
 	public function log($error='' ){
 		$data = array('error' => urldecode($error));
@@ -30,7 +32,14 @@ class Welcome extends CI_Controller {
 	public function login(){
 		$this->load->view('login');
 	}
+	public function head(){
+		$this->load->view('head');
+	}
 	public function inscri(){
 		$this->load->view('inscription');
+	}
+	public function page(){
+		$data['contents']='profil';
+		$this->load->view('page',$data);
 	}
 }
