@@ -22,9 +22,12 @@ class Welcome extends CI_Controller {
 	{
 		// $this->load->view('welcome_message');
 		// $this->load->view('login');
+		$this->load->view('pageproposition');
+		// $this->load->view('allproposition');
+		
 		// $this->load->view('header');
 		// $this->load->view('profil');
-		$this->load->view('modifier');
+		// $this->load->view('modifier');
 
 	}
 	public function log($error='' ){
@@ -43,8 +46,16 @@ class Welcome extends CI_Controller {
 	public function ajout(){
 		$this->load->view('ajout');
 	}
+	public function modifier(){
+		$this->load->view('modifier');
+	}
 	public function page(){
 		$data['contents']='profil';
 		$this->load->view('page',$data);
+	}
+	
+	public function pageproposition(){
+		$data['contents']='allproposition';
+		$this->load->view('pageproposition',$data);
 	}
 }
