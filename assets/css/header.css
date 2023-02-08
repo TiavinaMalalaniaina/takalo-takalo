@@ -25,3 +25,23 @@
 	border-radius: 25px;
 	letter-spacing: 1.3px; 
 }
+.foot{
+	width: 800px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr	;
+	margin: 0 auto;
+		gap: 10px 2em;
+}
+.f{
+	margin: 0 auto;
+    width: 200px;
+  }
+.footer{
+	background-color:black ;
+	margin: 0 auto;
+	width: 96%;
+}
+.footer h4{
+	height: 60px;
+	color: rgb(199, 149, 75);
+}
