@@ -25,7 +25,9 @@ class Welcome extends CI_Controller {
 		// $this->load->view('pageproposition');
 		// $this->load->view('allproposition');
 		// $this->load->view('proposition');
-		$this->load->view('detailproposition');
+		// $this->load->view('detailproposition');
+		// $this->load->view('detailobjet');
+		$this->load->view('pageobjet');
 		
 		// $this->load->view('header');
 		// $this->load->view('profil');
