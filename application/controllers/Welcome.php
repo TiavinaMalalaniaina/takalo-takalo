@@ -20,11 +20,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
-		
+		// $this->load->view('welcome_message');
+		$this->load->view('login');
 	}
 	public function log($error='' ){
 		$data = array('error' => urldecode($error));
 		$this->load->view('log_form', $data);
+	}
+	public function login(){
+		$this->load->view('login');
+	}
+	public function inscri(){
+		$this->load->view('inscription');
 	}
 }

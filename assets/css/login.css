@@ -1,14 +1,12 @@
 .wraper
 {
-	max-width: 350px;
-	min-height: 570px;
+	max-width: 450px;
+	min-height: 600px;
 	margin: 80px auto;
 	padding: 40px 30px 30px 30px;
-	/* background: #735353; */
-	background-image:url(images/backk.jpg);
-
+	background: #735353;
+	box-shadow: 10px 5px 5px; 
 }
-
 .logo
  {
  	width: 130px;
@@ -21,26 +19,26 @@
  	height: 80%;
  	border-radius: 50%;
 }
-.container form{
-	padding: 0 40px;
-	box-sizing: border-box;
-}
-form .content{
-	position: relative;
-	border-bottom: 2px solid #adadad;
-	margin: 30px 0;
-}
-
-.content  input
+.content .form-container
 {
-	width: 86%;
-	border: none;
-	background: none;
-	font-size: 1.2rem;
-	padding: 10px 15px 10px 10px;
-	outline: none;
+	max-width: 900px;
+	margin: 0 auto;
+	box-shadow: 10px 5px 5px ; 
 }
+.content form
+{
+	background-color: #ffffff;
+	padding: 40px 60px;
+	color: #505e6c;
+} 
 
+.content form .form-control
+{
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #dfe7f1;
+	height: 40px;
+}
 .container .btn
 {
 	width: 100%;
@@ -54,16 +52,12 @@ form .content{
 
 .container .btn:hover,.container .btn:focus 
 {
-	background-color: #832f2fde;
+	background-color: #650e0ede;
 }
 .container .content
 {
 background: #FFFFFF;
 margin-top: 100px;
-}
-hr{
-	height: 2px;
-	background-color: gray;
 }
 
 .footer
