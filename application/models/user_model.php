@@ -2,10 +2,9 @@
     if(!defined('BASEPATH')) exit('No direct script access allowed');
     class User_model extends CI_Model {
         
-        public function getLogedUser() {
-            $user_id = $this->session->userdata('user_id');
-            $sql = 'SELECT * FROM user WHERE id=%';
-            $sql = sprintf($sql, $user_id);
+        public function getUserById($idUser) {
+            $sql = 'SELECT * FROM user WHERE idUser=%s';
+            $sql = sprintf($sql, $idUser);
             $query = $this->db->query($sql);
             $user = $query->row_array();
             return $user;
@@ -21,16 +20,31 @@
             return $user;
         }
 
-        public function saveNewUser($name) {
-            $sql = "INSERT INTO user VALUES (default, '%')";
-            $sql = sprintf($sql, $this->db->escape($name));
+        public function saveNewUser($nom, $prenom, $mdp) {
+            $sql = "INSERT INTO user(idUser, nom, prenom, mdp, image, admin) VALUES (null, '%s', '%s', '%s', 'im.png', 0)";
+            $sql = sprintf($sql, $nom, $prenom, $mdp);
             $this->db->query($sql);
         }
 
-        public function updateUser($id, $name) {
-            $sql = "UPDATE user SET name='%' WHERE id=%";
-            $sql = sprintf($sql, $this->db->escape($name), $this->db->escape($id));
+        public function setImageUser($image, $idUser) {
+            $sql = "UPDATE user SET image='%s' WHERE idUser=%s";
+            $sql = sprintf($sql, $image, $idUser);
             $this->db->query($sql);
+        }
+
+
+        public function getNbrUser() {
+            $sql = "SELECT count(*) FROM user WHERE admin=0";
+            $query = $this->db->query($sql);
+            $nbr = $query->row_array();
+            return $nbr;
+        }
+
+        public function getLastUser() {
+            $sql = "SELECT * FROM user ORDER BY idUser DESC LIMIT 1";
+            $query = $this->db->query($sql);
+            $user = $query->row_array();
+            return $user;
         }
     }
 ?>

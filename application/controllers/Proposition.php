@@ -21,9 +21,11 @@ class Proposition extends CI_Controller {
 
 
     public function addProposition() {
-        $idEchange = $this->input->post('idEchange');
-        $idObject = $this->input->post('idObject');
+        $idEchange = $this->input->get('idEchange');
+        $idObject = $this->input->get('idObject');
+        echo $idEchange."  ".$idObject;
         $this->proposition_model->addProposition($idEchange, $idObject);
+        redirect(site_url('echange/propositionSends?idEchange='.$idEchange));
     }
 
 

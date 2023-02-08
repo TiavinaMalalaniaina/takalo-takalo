@@ -27,4 +27,10 @@ class Welcome extends CI_Controller {
 		$data = array('error' => urldecode($error));
 		$this->load->view('log_form', $data);
 	}
+	public function ins() {
+		$this->load->view('listObject');
+	}
+	public function ins2() {
+		$this->load->view('uploadObject');
+	}
 }

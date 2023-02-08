@@ -24,7 +24,6 @@ class Content extends CI_Controller {
 		$config['upload_path']		= './assets/img/';
 		$config['allowed_types']	= 'gif|png|jpg|';
 
-
 		$this->load->library('upload', $config);
 
 		if(!$this->upload->do_upload('userfile')) {
