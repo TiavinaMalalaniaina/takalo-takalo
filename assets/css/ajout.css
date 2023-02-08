@@ -1,0 +1,48 @@
+.contenu {
+margin-top: 60px;
+}
+.contenu .form-container
+{
+	max-width: 700px;
+	margin: 0 auto;
+	box-shadow: 1px 1px 5px black;
+}
+.contenu form
+{
+	background-color: #ffffff;
+	padding: 40px 60px;
+	color: #505e6c;
+} 
+.contenu h2
+{
+	font-size: 24px;
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+.contenu form .form-control
+{
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #dfe7f1;
+	height: 40px;
+}
+.contenu form select
+{
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #dfe7f1;
+	height: 40px;
+}
+.b{
+	margin-left: 50%;
+	margin-top: 30px;
+}
+.b1{
+	width: 90px;
+}
+.b2{
+	width: 90px;
+}
+a{
+	text-decoration: none;
+}

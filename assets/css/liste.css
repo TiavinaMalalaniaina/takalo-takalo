@@ -1,0 +1,42 @@
+.box {
+	margin: 0 auto;
+	width: 80%;
+	height: 800px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 10px 2em;
+  }
+  .box img{
+	width: 500px;
+	height: 250px;
+  }
+  .ajout{
+	width: 96%;
+	margin: 0 auto;
+	background-color: black;
+  }
+  .ajout .btt{
+	width: 10% ;
+  }
+
+.btn
+{
+	margin-top: 10%;
+}
+.btn-primary
+{
+	margin-right: 10%;
+}
+.container a{color: white;}
+.container button{
+	width: 150px;
+	height: 40px;
+	margin-left: 490px;
+	margin-top: 7px;
+	background-color:black;
+	color: #fff;
+	border-radius: 1px;
+	box-shadow: 3px 3px 3px #b1b1b1,3px 3px 3px #fff;
+	letter-spacing: 1.3px;
+}
+
