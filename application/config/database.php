@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => '185.161.10.160',
 	'username' => 'codeforce',
 	'password' => 'CI3Angular!',
 	'database' => 'codeforce_takalo',
